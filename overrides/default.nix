@@ -267,6 +267,14 @@ lib.composeManyExtensions [
         }
       );
 
+      attrs = prev.attrs.overridePythonAttrs (
+        old: {
+          postPatch = old.postPatch or "" + ''
+            substituteInPlace pyproject.toml --replace-warn 'license-files = ["LICENSE"]' ""
+          '';
+        }
+      );
+
       av = prev.av.overridePythonAttrs (
         old: {
           nativeBuildInputs = old.nativeBuildInputs or [ ] ++ [ pkg-config ];
