@@ -8643,8 +8643,15 @@
     "setuptools"
   ],
   "griffe": [
-    "pdm-pep517",
-    "setuptools"
+      "setuptools",
+    {
+      "buildSystem": "pdm-pep517",
+      "until": "0.25.5"
+    },
+    {
+      "buildSystem": "pdm-backend",
+      "from": "0.26.0"
+    }
   ],
   "grip": [
     "setuptools"
