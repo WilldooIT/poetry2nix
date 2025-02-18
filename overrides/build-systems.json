@@ -12280,7 +12280,15 @@
     }
   ],
   "mkdocstrings-python": [
-    "setuptools"
+    "setuptools",
+    {
+      "buildSystem": "pdm-pep517",
+      "until": "0.9.0"
+    },
+    {
+      "buildSystem": "pdm-backend",
+      "from": "0.10.0"
+    }
   ],
   "mkl-service": [
     "cython",
