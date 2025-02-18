@@ -12269,8 +12269,15 @@
     "setuptools"
   ],
   "mkdocstrings": [
-    "pdm-pep517",
-    "setuptools"
+    "setuptools",
+    {
+      "buildSystem": "pdm-pep517",
+      "until": "0.21.2"
+    },
+    {
+      "buildSystem": "pdm-backend",
+      "from": "0.22.0"
+    }
   ],
   "mkdocstrings-python": [
     "setuptools"
