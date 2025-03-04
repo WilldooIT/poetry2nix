@@ -1,4 +1,7 @@
 {
+  "a2wsgi": [
+    "pdm-backend"
+  ],
   "aadict": [
     "setuptools"
   ],
