@@ -12222,6 +12222,10 @@
     {
       "buildSystem": "hatchling",
       "from": "8.5.3"
+    },
+    {
+      "buildSystem": "setuptools",
+      "to": "8.5.2"
     }
   ],
   "mkdocs-material-extensions": [
