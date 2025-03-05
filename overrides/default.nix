@@ -1297,6 +1297,10 @@ lib.composeManyExtensions [
           ];
         }
       );
+      
+      jiter = prev.jiter.override {
+          preferWheel = true;
+      };
 
       pyviz-comms = prev.pyviz-comms.overridePythonAttrs (
         old: lib.optionalAttrs (!(old.src.isWheel or false)) {
