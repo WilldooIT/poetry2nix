@@ -2348,6 +2348,9 @@
     "flit-core",
     "setuptools"
   ],
+  "backrefs": [
+    "hatchling"
+  ],
   "backoff": [
     "poetry-core",
     "setuptools"
