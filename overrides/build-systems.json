@@ -12258,6 +12258,7 @@
   ],
   "mkdocstrings": [
     "setuptools",
+    "poetry",
     {
       "buildSystem": "pdm-pep517",
       "until": "0.21.2"
