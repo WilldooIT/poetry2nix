@@ -4435,7 +4435,8 @@ lib.composeManyExtensions [
         propagatedBuildInputs = old.propagatedBuildInputs or [ ] ++ [ final.babel ];
       });
 
-      mkdocs-material = prev.mkdocs-material.overridePythonAttrs (old: {
+      mkdocs-material = prev.mkdocs-material.overridePythonAttrs (
+        old: lib.optionalAttrs (lib.versionAtLeast old.version "8.5.3") {
         postPatch = old.postPatch or "" + ''
           substituteInPlace pyproject.toml --replace-warn 'filename = "requirements.txt"' ""
         '';
