@@ -4431,6 +4431,15 @@ lib.composeManyExtensions [
           substituteInPlace pyproject.toml --replace-warn 'filename = "requirements.txt"' ""
         '';
       });
+      
+      mkdocs-autorefs = prev.mkdocs-autorefs.overridePythonAttrs (
+        old: {
+          postPatch = old.postPatch or "" + ''
+            substituteInPlace pyproject.toml --replace-warn 'license = "ISC"' 'license = {text = "ISC"}'
+            substituteInPlace pyproject.toml --replace-warn 'license-files = ["LICENSE"]' ""
+          '';
+        }
+      );
 
       # patch mkdocstrings to fix jinja2 imports
       mkdocstrings =
