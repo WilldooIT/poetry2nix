@@ -11466,6 +11466,9 @@
   "lunarcalendar": [
     "setuptools"
   ],
+  "lunr": [
+    "setuptools"
+  ],
   "lupa": [
     "cython",
     "setuptools"
