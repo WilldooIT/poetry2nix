@@ -3162,6 +3162,10 @@ lib.composeManyExtensions [
         }
       );
 
+      pytkdocs = prev.pytkdocs.override {
+          preferWheel = true;
+      };
+
       pyudev = prev.pyudev.overridePythonAttrs (_old: {
         postPatch = ''
           substituteInPlace src/pyudev/_ctypeslib/utils.py \

@@ -20478,7 +20478,8 @@
     "setuptools"
   ],
   "pytkdocs": [
-    "pdm-pep517"
+    "pdm-pep517",
+    "poetry"
   ],
   "pytlv": [
     "setuptools"
