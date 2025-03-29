@@ -26331,6 +26331,9 @@
   "typing-inspect": [
     "setuptools"
   ],
+  "typing-inspection": [
+    "hatchling"
+  ],
   "typing-validation": [
     "setuptools",
     "setuptools-scm"
