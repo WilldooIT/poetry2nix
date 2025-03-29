@@ -1176,8 +1176,14 @@
     "setuptools"
   ],
   "argcomplete": [
-    "setuptools",
-    "setuptools-scm"
+    {
+      "buildSystem": "setuptools",
+      "until": "3.5.3"
+    },
+    {
+      "buildSystem": "hatchling",
+      "from": "3.5.3"
+    }
   ],
   "argh": [
     "flit-core",
