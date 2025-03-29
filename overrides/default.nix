@@ -371,7 +371,7 @@ lib.composeManyExtensions [
             "4.1.3" = "sha256-Uag1pUuis5lpnus2p5UrMLa4HP7VQLhKxR5TEMfpK0s=";
             "4.2.0" = "sha256-dOS9A3pTwXYkzPFFNh5emxJw7pSdDyY+mNIoHdwNdmg=";
             "4.2.1" = "sha256-vbGF0oOhEDg3QIyQ0lASqbWtTWXiPAmGMnlF9I+hU78=";
-            "4.3.0" = "sha256-ond30buH8w9Th3l/7YW+OQ8ypFxYCu5eGcJQxnqRlN4=";
+            "4.3.0" = "sha256-AuUchhKsVHJD7T4fe6jPmmO2+VCglU/LjXH3y7vu6/8=";
           }.${version} or (
             lib.warn "Unknown bcrypt version: '${version}'. Please update getCargoHash." lib.fakeHash
           );
