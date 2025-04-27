@@ -12416,7 +12416,9 @@
     "setuptools-scm"
   ],
   "molecule-plugins": [
-    "setuptools-scm"
+    "setuptools-scm",
+    "hatch-vcs",
+    "hatchling"
   ],
   "monai": [
     "setuptools"
