@@ -3511,6 +3511,9 @@
   "chardet": [
     "setuptools"
   ],
+  "chargebee": [
+    "setuptools"
+  ],
   "charset-normalizer": [
     "setuptools"
   ],
