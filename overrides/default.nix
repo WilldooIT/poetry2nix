@@ -4054,6 +4054,13 @@ lib.composeManyExtensions [
           final.pytest-runner
         ];
       });
+      
+      typing-inspection = prev.typing-inspection.overridePythonAttrs (old: {
+        postPatch = old.postPatch or "" + ''
+          sed -i "/Programming Language :: Python :: 3.14/d" pyproject.toml
+          substituteInPlace pyproject.toml --replace-warn "license-files = ['LICENSE']" ""
+        '';
+      });
 
       urwidtrees = prev.urwidtrees.overridePythonAttrs (
         old: {
