@@ -23469,6 +23469,9 @@
   "sqltrie": [
     "setuptools-scm"
   ],
+  "squareup": [
+    "poetry"
+  ],
   "sre-yield": [
     "setuptools"
   ],
