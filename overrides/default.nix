@@ -1161,6 +1161,14 @@ lib.composeManyExtensions [
         }
       );
 
+      html2text = prev.html2text.overridePythonAttrs (
+        old: {
+          postPatch = old.postPatch or "" + ''
+            substituteInPlace pyproject.toml --replace-warn 'license = "GPL-3.0-or-later"' 'license = {text = "GPL-3.0-or-later"}'
+          '';
+        }
+      );
+
       httplib2 = prev.httplib2.overridePythonAttrs (old: {
         propagatedBuildInputs = old.propagatedBuildInputs or [ ] ++ [ final.pyparsing ];
       });
