@@ -5934,6 +5934,10 @@
     {
       "buildSystem": "hatchling",
       "from": "7.1.0"
+    },
+    {
+      "buildSystem": "hatch-vcs",
+      "from": "7.1.0"
     }
   ],
   "docker-image-py": [
