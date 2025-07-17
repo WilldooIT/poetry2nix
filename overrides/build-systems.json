@@ -17043,6 +17043,9 @@
   "pyaxmlparser": [
     "setuptools"
   ],
+  "pybadges": [
+    "setuptools"
+  ],
   "pybalboa": [
     "poetry-core",
     "setuptools"
