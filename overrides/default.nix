@@ -4063,6 +4063,12 @@ lib.composeManyExtensions [
         '';
       });
 
+      typing-extensions = prev.typing-extensions.overridePythonAttrs (old: {
+        postPatch = old.postPatch or "" + ''
+            substituteInPlace pyproject.toml --replace-warn 'license = "PSF-2.0"' 'license = {text = "PSF-2.0"}'
+        '';
+      });
+
       urwidtrees = prev.urwidtrees.overridePythonAttrs (
         old: {
           propagatedBuildInputs = old.propagatedBuildInputs or [ ] ++ [
