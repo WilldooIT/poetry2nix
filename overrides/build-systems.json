@@ -22571,6 +22571,9 @@
   "shodan": [
     "setuptools"
   ],
+  "shopifyapi": [
+    "setuptools"
+  ],
   "shortuuid": [
     "poetry",
     "poetry-core",
