@@ -3901,6 +3901,19 @@ lib.composeManyExtensions [
           '';
         });
 
+      soupsieve = prev.soupsieve.overridePythonAttrs (old: {
+        preferWheel = true;
+        buildInputs = old.buildInputs or [ ] ++ [ final.setuptools final.hatchling ];
+        patchPhase = builtins.concatStringsSep "\n" [
+          (old.patchPhase or "")
+          ''
+            sed -i "/Programming Language :: Python :: 3.14/d" pyproject.toml
+            sed -i "/Programming Language :: Python :: 3.14/d" hatch_build.py
+          ''
+        ];
+        }
+      );
+
       sqlmodel = prev.sqlmodel.overridePythonAttrs (old: {
         # sqlmodel's pyproject.toml lists version = "0" that it changes during a build phase
         # If this isn't fixed, it gets a vague "ERROR: No matching distribution for sqlmodel..." error

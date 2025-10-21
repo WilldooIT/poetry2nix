@@ -23019,10 +23019,6 @@
   "soundfile": [
     "setuptools"
   ],
-  "soupsieve": [
-    "hatchling",
-    "setuptools"
-  ],
   "soxr": [
     "cython",
     "setuptools",
