@@ -16912,6 +16912,9 @@
   "pyacoustid": [
     "setuptools"
   ],
+  "pyactiveresource": [
+    "setuptools"
+  ],
   "pyads": [
     "setuptools"
   ],
